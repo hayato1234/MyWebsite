@@ -11,24 +11,26 @@ import {
   Button,
 } from "reactstrap";
 import reactImg from "../RE-react.png";
+import reactNativeImg from "../RE-iOS.png";
+import bootstrapImg from "../RE-bootstrap.png";
 
-const items = [
+const REs = [
   {
     src: reactImg,
-    altText: "Slide 1",
-    caption: "Slide 1",
+    altText: "React App",
+    caption: "React App",
     key: 1,
   },
   {
-    src: "https://picsum.photos/id/456/1200/400",
-    altText: "Slide 2",
-    caption: "Slide 2",
+    src: reactNativeImg,
+    altText: "React Native App",
+    caption: "React Native App",
     key: 2,
   },
   {
-    src: "https://picsum.photos/id/678/1200/400",
-    altText: "Slide 3",
-    caption: "Slide 3",
+    src: bootstrapImg,
+    altText: "Bootstrap page",
+    caption: "Bootstrap page",
     key: 3,
   },
 ];
@@ -39,13 +41,13 @@ const Projects = () => {
 
   const next = () => {
     if (animating) return;
-    const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
+    const nextIndex = activeIndex === REs.length - 1 ? 0 : activeIndex + 1;
     setActiveIndex(nextIndex);
   };
 
   const previous = () => {
     if (animating) return;
-    const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
+    const nextIndex = activeIndex === 0 ? REs.length - 1 : activeIndex - 1;
     setActiveIndex(nextIndex);
   };
 
@@ -54,21 +56,17 @@ const Projects = () => {
     setActiveIndex(newIndex);
   };
 
-  const slides = items.map((item) => {
+  const slides = REs.map((REs) => {
     return (
       <CarouselItem
         className="custom-tag"
         tag="div"
-        key={item.src}
+        key={REs.src}
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
       >
-        <img className="Carousel-img" src={item.src} alt={item.altText} />
-        <CarouselCaption
-          className="text-danger"
-          captionText={item.caption}
-          captionHeader={item.caption}
-        />
+        <img className="Carousel-img" src={REs.src} alt={REs.altText} />
+        <CarouselCaption captionText={REs.caption} />
       </CarouselItem>
     );
   });
@@ -86,7 +84,7 @@ const Projects = () => {
         <div className="col-md-5">
           <Carousel activeIndex={activeIndex} next={next} previous={previous}>
             <CarouselIndicators
-              items={items}
+              items={REs}
               activeIndex={activeIndex}
               onClickHandler={goToIndex}
             />
@@ -94,6 +92,7 @@ const Projects = () => {
             <CarouselControl
               direction="prev"
               directionText="Previous"
+              className="color-primary"
               onClickHandler={previous}
             />
             <CarouselControl
@@ -123,7 +122,7 @@ const Projects = () => {
                   Bootstrap{" "}
                 </Button>
               </a>
-              <p>Bootstrap, JavaScript</p>
+              <p>Bootstrap, SASS, JavaScript, jQuery, CSS, HTML, </p>
             </li>
             <li>
               <a
