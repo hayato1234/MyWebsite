@@ -19,7 +19,7 @@ const Projects = () => {
       <>
         {project.info.map((info) => {
           return (
-            <li>
+            <li key={info.key}>
               <a href={info.github} target="_blank" rel="noreferrer">
                 <Button role="link" outline color="info">
                   <i className="fa fa-github" aria-hidden="true" />{" "}
@@ -60,9 +60,7 @@ const Projects = () => {
     const Slides = project.carousel.map((project) => {
       return (
         <CarouselItem
-          className="custom-tag"
-          tag="div"
-          key={project.src}
+          key={project.key}
           onExiting={() => setAnimating(true)}
           onExited={() => setAnimating(false)}
         >
@@ -89,14 +87,10 @@ const Projects = () => {
                 activeIndex={activeIndex}
                 onClickHandler={goToIndex}
               />
-
               {Slides}
               <CarouselControl
                 direction="prev"
                 directionText="Previous"
-                className="color-primary"
-                //can change color??
-
                 onClickHandler={previous}
               />
               <CarouselControl
@@ -118,10 +112,10 @@ const Projects = () => {
   };
 
   return (
-    <Container>
+    <Container id="projects">
       <Row>
         <hr />
-        <h3 className="Page-header mb-3">Projects</h3>
+        <h2 className="Page-header mb-3">Projects</h2>
       </Row>
       <MyProject project={REs} />
       <MyProject project={HT} />

@@ -3,9 +3,9 @@ import { Container, Row } from "reactstrap";
 
 const About = () => {
   return (
-    <Container>
+    <Container id="about">
       <Row>
-        <h3 className="Page-header">About myself</h3>
+        <h2 className="Page-header">About myself</h2>
       </Row>
       <Row>
         <div className="col-md-8">
@@ -28,9 +28,7 @@ const About = () => {
               https://github.com/hayato1234/
             </a>{" "}
           </p>
-          <p>CodePen: https://codepen.io/SteveMoritani/pens/public</p>
-          <p>Expo Snacks: https://expo.dev/@steve.moritani?tab=snacks </p>
-          <p>Twitter: </p>
+          <p>LinkedIn: </p>
         </div>
       </Row>
     </Container>

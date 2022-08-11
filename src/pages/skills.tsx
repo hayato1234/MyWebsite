@@ -1,26 +1,39 @@
 import React from "react";
 import { Container, Row } from "reactstrap";
+import { skillCategories } from "../shared/skills";
 
 const Skills = () => {
+  const skillList = skillCategories.map((skill) => {
+    return (
+      <React.Fragment key={skill.key}>
+        <h5>{skill.category}</h5>
+        <div style={{ marginBottom: "20px" }}>
+          {skill.list.map((skill, i) => {
+            return (
+              <span
+                key={i}
+                style={{
+                  background: "#534bae",
+                  marginRight: "10px",
+                  padding: "5px",
+                  borderRadius: "5px",
+                }}
+              >
+                {skill}
+              </span>
+            );
+          })}
+        </div>
+      </React.Fragment>
+    );
+  });
   return (
-    <Container>
+    <Container id="skills">
       <Row>
         <hr />
-        <h3 className="Page-header mb-3">Skills</h3>
+        <h2 className="Page-header mb-3">Skills</h2>
       </Row>
-      <h5>Web</h5>
-      <p>
-        HTML5 CSS/SASS JavaScript Bootstrap jQuery Bootstrap React.js NPM/Yarn
-        JSX Visual Studio
-      </p>
-      <h5>Mobile</h5>
-      <p>React Native Java Swift SQLite XCode Android Studio</p>
-      <h5>Backend</h5>
-      <p>Express.js MongoDB/Mongoose JWT/Passport Rest API</p>
-      <h5>Others</h5>
-      <p>TypeScript Git Bash Microsoft Word Excel Firebase-store</p>
-      <h5>Communication</h5>
-      <p>Japanese - Native</p>
+      {skillList}
     </Container>
   );
 };

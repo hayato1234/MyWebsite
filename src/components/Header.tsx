@@ -24,28 +24,23 @@ const Header = () => {
         <Collapse isOpen={menuOpen} navbar>
           <Nav className="ms-auto" navbar>
             <NavItem>
-              <NavLink className="nav-link" to="/">
-                About
+              <NavLink className="nav-link">
+                <a href="#about">About</a>
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink className="nav-link" to="/directory">
-                Project
+              <NavLink className="nav-link">
+                <a href="#projects">Projects</a>
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink className="nav-link" to="/about">
-                Skills
+              <NavLink className="nav-link">
+                <a href="#skills">Skills</a>
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink className="nav-link" to="/contact">
-                Links
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink className="nav-link" to="/contact">
-                Contact
+              <NavLink className="nav-link">
+                <a href="#contact">Contact</a>
               </NavLink>
             </NavItem>
           </Nav>

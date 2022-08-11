@@ -5,24 +5,11 @@ import ht_detail from "../images/HT-unit-detail.png";
 import ht_unit from "../images/HT-unit-list.png";
 import ht_login from "../images/HT-login.png";
 
-export interface CarouselType {
-  src: string;
-  altText: string;
-  caption: string;
-  key: number;
-}
-
-export interface InfoType {
-  github: string;
-  title: string;
-  tags: string;
-}
-
 export interface ProjectType {
   title: string;
   about: string;
   carousel: { src: string; altText: string; caption: string; key: number }[];
-  info: { github: string; linkTitle: string; tags: string }[];
+  info: { github: string; linkTitle: string; tags: string; key: number }[];
 }
 
 export const REs = {
@@ -54,45 +41,49 @@ export const REs = {
       github: "https://github.com/hayato1234/E-commerce-bootstrap",
       linkTitle: "Webpage with Bootstrap",
       tags: "Bootstrap, SASS, JavaScript, jQuery, CSS, HTML",
+      key: 1,
     },
     {
       github: "https://github.com/hayato1234/E-commerce-React",
       linkTitle: "Webpage with React",
       tags: "React, Redux, Reactstrap, Thunk",
+      key: 2,
     },
     {
       github: "https://github.com/hayato1234/ReactNative-Typescript-Ecommerce",
       linkTitle: "React Native App",
       tags: "React Native, TypeScript, Redux toolkit, Expo",
+      key: 3,
     },
     {
       github: "https://github.com/hayato1234/Server-for-E_commerce",
       linkTitle: "REST Server",
       tags: "NodeJS, Express, MongoDB, Mongoose, RESTful, OAuth 2.0, JWT/Passport, CORS, ejs",
+      key: 4,
     },
   ],
 };
 
 export const HT = {
-  title: "HayaTan (a Vocabulary Learning iOS App)",
+  title: "HayaTan (Vocabulary Learning iOS App)",
   about: "Flash card app",
   carousel: [
     {
       src: ht_detail,
-      altText: "React App",
-      caption: "React App",
+      altText: "Vocab screen",
+      caption: "Vocab screen",
       key: 1,
     },
     {
       src: ht_unit,
-      altText: "React Native App",
-      caption: "React Native App",
+      altText: "Unit list",
+      caption: "Unit list",
       key: 2,
     },
     {
       src: ht_login,
-      altText: "Bootstrap page",
-      caption: "Bootstrap page",
+      altText: "Google login page",
+      caption: "Google login page",
       key: 3,
     },
   ],
@@ -101,94 +92,7 @@ export const HT = {
       github: "https://github.com/hayato1234/HT",
       linkTitle: "HayaTan App",
       tags: "SwiftUI, Xcode, iOS app, firebase",
+      key: 1,
     },
   ],
 };
-
-export const REsCarousel = [
-  {
-    src: reactImg,
-    altText: "React App",
-    caption: "React App",
-    key: 1,
-  },
-  {
-    src: reactNativeImg,
-    altText: "React Native App",
-    caption: "React Native App",
-    key: 2,
-  },
-  {
-    src: bootstrapImg,
-    altText: "Bootstrap page",
-    caption: "Bootstrap page",
-    key: 3,
-  },
-];
-
-export const REsInfo = [
-  {
-    github: "https://github.com/hayato1234/E-commerce-bootstrap",
-    linkTitle: "Webpage with Bootstrap",
-    tags: "Bootstrap, SASS, JavaScript, jQuery, CSS, HTML",
-  },
-  {
-    github: "https://github.com/hayato1234/E-commerce-React",
-    linkTitle: "Webpage with React",
-    tags: "React, Redux, Reactstrap, Thunk",
-  },
-  {
-    github: "https://github.com/hayato1234/ReactNative-Typescript-Ecommerce",
-    linkTitle: "React Native App",
-    tags: "React Native, TypeScript, Redux toolkit, Expo",
-  },
-  {
-    github: "https://github.com/hayato1234/Server-for-E_commerce",
-    linkTitle: "REST Server",
-    tags: "NodeJS, Express, MongoDB, Mongoose, RESTful, OAuth 2.0, JWT/Passport, CORS, ejs",
-  },
-];
-
-export const HTCarousel = [
-  {
-    src: ht_detail,
-    altText: "React App",
-    caption: "React App",
-    key: 1,
-  },
-  {
-    src: ht_unit,
-    altText: "React Native App",
-    caption: "React Native App",
-    key: 2,
-  },
-  {
-    src: ht_login,
-    altText: "Bootstrap page",
-    caption: "Bootstrap page",
-    key: 3,
-  },
-];
-
-export const HTInfo = [
-  {
-    github: "https://github.com/hayato1234/E-commerce-bootstrap",
-    linkTitle: "Webpage with Bootstrap",
-    tags: "Bootstrap, SASS, JavaScript, jQuery, CSS, HTML",
-  },
-  {
-    github: "https://github.com/hayato1234/E-commerce-React",
-    linkTitle: "Webpage with React",
-    tags: "React, Redux, Reactstrap, Thunk",
-  },
-  {
-    github: "https://github.com/hayato1234/ReactNative-Typescript-Ecommerce",
-    linkTitle: "React Native App",
-    tags: "React Native, TypeScript, Redux toolkit, Expo",
-  },
-  {
-    github: "https://github.com/hayato1234/Server-for-E_commerce",
-    linkTitle: "REST Server",
-    tags: "NodeJS, Express, MongoDB, Mongoose, RESTful, OAuth 2.0, JWT/Passport, CORS, ejs",
-  },
-];
