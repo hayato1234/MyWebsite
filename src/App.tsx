@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Header from "./components/Header";
 import About from "./pages/about";
 import Projects from "./pages/projects";
@@ -10,19 +10,14 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <div className="App">
+      <div id="top" />
       <Header />
-      <div
-        style={{
-          height: "calc(99vh - 100px)",
-          overflow: "auto",
-        }} /*<- this will prevent content from being hidden under header */
-      >
-        <About />
-        <Projects />
-        <Skills />
-        <Contact />
-        <Footer />
-      </div>
+
+      <About />
+      <Projects />
+      <Skills />
+      <Contact />
+      <Footer />
     </div>
   );
 }

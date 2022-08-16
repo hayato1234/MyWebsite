@@ -19,8 +19,7 @@ export const skillCategories = [
     key: 1,
     category: "・Mobile",
     list: [
-      "React",
-      "Native",
+      "React Native",
       "Java",
       "Swift",
       "SQLite",
@@ -31,7 +30,7 @@ export const skillCategories = [
   {
     key: 2,
     category: "・Backend",
-    list: ["Express.js", "MongoDB/Mongoose", "JWT/Passport", "Rest", "API"],
+    list: ["Express.js", "MongoDB/Mongoose", "JWT/Passport", "Rest API"],
   },
   {
     key: 3,
@@ -40,9 +39,7 @@ export const skillCategories = [
       "TypeScript",
       "Git",
       "Bash",
-      "Microsoft",
-      "Word",
-      "Excel",
+      "Microsoft Word/Excel",
       "Firebase-store",
     ],
   },

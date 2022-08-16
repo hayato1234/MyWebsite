@@ -2,6 +2,8 @@ import React from "react";
 import { Container, Row } from "reactstrap";
 import { skillCategories } from "../shared/skills";
 
+import { Element } from "react-scroll";
+
 const Skills = () => {
   const skillList = skillCategories.map((skill) => {
     return (
@@ -29,6 +31,7 @@ const Skills = () => {
   });
   return (
     <Container id="skills">
+      <Element name="skills" />
       <Row>
         <hr />
         <h2 className="Page-header mb-3">Skills</h2>

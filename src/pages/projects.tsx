@@ -1,17 +1,11 @@
-import React, { useState } from "react";
-import {
-  Container,
-  List,
-  Row,
-  Carousel,
-  CarouselItem,
-  CarouselControl,
-  CarouselIndicators,
-  CarouselCaption,
-  Button,
-} from "reactstrap";
+import React from "react";
+import { Container, List, Row, Button } from "reactstrap";
+import { Swiper, SwiperSlide } from "swiper/react/swiper-react";
+import { Navigation, Pagination } from "swiper";
 
 import { ProjectType, REs, HT } from "../shared/projects";
+
+import { Element } from "react-scroll";
 
 const Projects = () => {
   const Info = ({ project }: { project: ProjectType }) => {
@@ -35,42 +29,15 @@ const Projects = () => {
   };
 
   const MyProject = ({ project }: { project: ProjectType }) => {
-    const [activeIndex, setActiveIndex] = useState(0);
-    const [animating, setAnimating] = useState(false);
-
-    const next = () => {
-      if (animating) return;
-      const nextIndex =
-        activeIndex === project.carousel.length - 1 ? 0 : activeIndex + 1;
-      setActiveIndex(nextIndex);
-    };
-
-    const previous = () => {
-      if (animating) return;
-      const nextIndex =
-        activeIndex === 0 ? project.carousel.length - 1 : activeIndex - 1;
-      setActiveIndex(nextIndex);
-    };
-
-    const goToIndex = (newIndex: React.SetStateAction<number>) => {
-      if (animating) return;
-      setActiveIndex(newIndex);
-    };
-
     const Slides = project.carousel.map((project) => {
       return (
-        <CarouselItem
-          key={project.key}
-          onExiting={() => setAnimating(true)}
-          onExited={() => setAnimating(false)}
-        >
+        <SwiperSlide key={project.key}>
           <img
             className="Carousel-img"
             src={project.src}
             alt={project.altText}
           />
-          <CarouselCaption captionText={project.caption} />
-        </CarouselItem>
+        </SwiperSlide>
       );
     });
 
@@ -81,24 +48,14 @@ const Projects = () => {
         </Row>
         <Row>
           <div className="col-md-5">
-            <Carousel activeIndex={activeIndex} next={next} previous={previous}>
-              <CarouselIndicators
-                items={project.carousel}
-                activeIndex={activeIndex}
-                onClickHandler={goToIndex}
-              />
+            <Swiper
+              navigation={true}
+              pagination={true}
+              modules={[Navigation, Pagination]}
+              className="mySwiper"
+            >
               {Slides}
-              <CarouselControl
-                direction="prev"
-                directionText="Previous"
-                onClickHandler={previous}
-              />
-              <CarouselControl
-                direction="next"
-                directionText="Next"
-                onClickHandler={next}
-              />
-            </Carousel>
+            </Swiper>
           </div>
           <div className="col-md-7">
             <p>{project.about}</p>
@@ -113,12 +70,14 @@ const Projects = () => {
 
   return (
     <Container id="projects">
+      <Element name="projects" />
       <Row>
         <hr />
         <h2 className="Page-header mb-3">Projects</h2>
       </Row>
       <MyProject project={REs} />
       <MyProject project={HT} />
+
       <h5 className="mt-5">School Projects</h5>
     </Container>
   );

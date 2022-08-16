@@ -1,9 +1,12 @@
-import React from "react";
+import React, { MutableRefObject, Ref } from "react";
 import { Container, Row } from "reactstrap";
+
+import { Element } from "react-scroll";
 
 const About = () => {
   return (
     <Container id="about">
+      <Element name="about" />
       <Row>
         <h2 className="Page-header">About myself</h2>
       </Row>

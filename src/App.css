@@ -27,8 +27,14 @@
   min-height: 6rem;
 }
 
-.nav-link > a {
+.nav-item > a {
+  padding: 10px;
+  color: white;
   text-decoration: none;
+}
+
+.nav-item > a:hover {
+  color: gray;
 }
 
 /* ---------------header-------------------- */
@@ -40,19 +46,15 @@
 }
 
 .Carousel-img {
-  width: 100%;
-  max-height: 300px;
-  object-fit: contain;
+  width: auto;
+  max-height: 200px;
 }
 
-.carousel-caption {
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
-}
-
-.carousel-control {
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
+.swiper-slide {
+  max-height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ---------------project-------------------- */
