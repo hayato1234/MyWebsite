@@ -20,18 +20,26 @@ const About = () => {
           </p>
         </div>
         <div className="col">
-          <p>Email: </p>
           <p>
-            Github:{" "}
+            <i className="fa fa-envelope" aria-hidden="true" /> :{" "}
+            <a href="mailto:">Email</a>
+          </p>
+          <p>
+            <i className="fa fa-github" aria-hidden="true" /> :{" "}
             <a
               href="https://github.com/hayato1234/"
               target="_blank"
               rel="noreferrer"
             >
-              https://github.com/hayato1234/
+              Github
             </a>{" "}
           </p>
-          <p>LinkedIn: </p>
+          <p>
+            <i className="fa fa-linkedin" aria-hidden="true" /> :{" "}
+            <a href="" target="_blank" rel="noreferrer">
+              LinkedIn
+            </a>{" "}
+          </p>
         </div>
       </Row>
     </Container>

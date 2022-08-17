@@ -3,13 +3,9 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import "font-awesome/css/font-awesome.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import "swiper/css";
-// import "swiper/css/navigation";
-// import "swiper/css/pagination";
 import "swiper/swiper.min.css";
 import "swiper/modules/navigation/navigation.min.css";
 import "swiper/modules/pagination/pagination.min.css";
-// import "swiper/components/pagination/pagination.min.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 

@@ -9,6 +9,8 @@ import {
   HT,
   NUCAMPSITE,
   MORITWITTER,
+  NOTIFLASH,
+  NUCAMPSERVER,
 } from "../shared/projects";
 
 import { Element } from "react-scroll";
@@ -86,11 +88,16 @@ const Projects = () => {
 
       {oldOpen ? (
         <>
-          <h5 className="mt-5" onClick={() => toggleOldOpen(!oldOpen)}>
+          <h5
+            className="mt-5"
+            style={{ color: "grey" }}
+            onClick={() => toggleOldOpen(!oldOpen)}
+          >
             Old Projects <i className="fa fa-caret-up" aria-hidden="true" />
           </h5>
           <div style={{ border: "2px solid gray" }}>
             <MyProject project={MORITWITTER} />
+            <MyProject project={NOTIFLASH} />
           </div>
         </>
       ) : (
@@ -101,11 +108,16 @@ const Projects = () => {
 
       {schoolOpen ? (
         <>
-          <h5 className="mt-5" onClick={() => toggleSchoolOpen(!schoolOpen)}>
+          <h5
+            className="mt-5"
+            style={{ color: "grey" }}
+            onClick={() => toggleSchoolOpen(!schoolOpen)}
+          >
             School Projects <i className="fa fa-caret-up" aria-hidden="true" />
           </h5>
-          <div style={{ border: "2px solid gray" }}>
+          <div className="mb-5" style={{ border: "2px solid gray" }}>
             <MyProject project={NUCAMPSITE} />
+            <MyProject project={NUCAMPSERVER} />
           </div>
         </>
       ) : (

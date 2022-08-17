@@ -15,6 +15,24 @@ const Contact = () => {
       <Row className="row-content">
         <Col>
           <a
+            href="https://github.com/hayato1234/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Button className="m-3" role="link" outline color="info">
+              <i className="fa fa-github" aria-hidden="true" /> Github
+            </Button>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/steve-moritani/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Button className="m-3" role="link" outline color="info">
+              <i className="fa fa-linkedin" aria-hidden="true" /> Linkedin
+            </Button>
+          </a>
+          <a
             href="https://twitter.com/MoritaniSteve"
             target="_blank"
             rel="noreferrer"
@@ -39,24 +57,6 @@ const Contact = () => {
           >
             <Button className="m-3" role="link" outline color="info">
               <i className="fa fa-codepen" aria-hidden="true" /> CodePen
-            </Button>
-          </a>
-          <a
-            href="https://github.com/hayato1234/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Button className="m-3" role="link" outline color="info">
-              <i className="fa fa-github" aria-hidden="true" /> Github
-            </Button>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/steve-moritani/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Button className="m-3" role="link" outline color="info">
-              <i className="fa fa-linkedin" aria-hidden="true" /> Linkedin
             </Button>
           </a>
         </Col>

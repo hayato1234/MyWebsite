@@ -8,7 +8,12 @@ import { useForm } from "@formspree/react";
 const ContactForm = () => {
   const [state, handleSubmit] = useForm("xgeqevop");
   if (state.succeeded) {
-    return <p>Thank you! The message has been sent</p>;
+    return (
+      <p>
+        Thank you! The message has been sent. I will contact you with the email
+        address provided.
+      </p>
+    );
   }
 
   const initialValues = {

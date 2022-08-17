@@ -1,14 +1,12 @@
 import React, { MutableRefObject, Ref, useState } from "react";
-import logo from "../logo.svg";
+import logo from "../logo-white.png";
 import {
-  Button,
   Collapse,
   Nav,
   Navbar,
   NavbarBrand,
   NavbarToggler,
   NavItem,
-  NavLink,
 } from "reactstrap";
 
 import Scroll from "react-scroll";
@@ -21,7 +19,7 @@ const Header = () => {
       <Navbar dark sticky="top" expand="md">
         <NavbarBrand className="ms-5" href="/">
           <img src={logo} alt="my logo" className="float-start" />
-          <h1 className="mt-1 Page-header">Steve Moritani</h1>
+          <h1 className="pt-2 Page-header">Steve Moritani</h1>
         </NavbarBrand>
         <NavbarToggler onClick={() => setMenuOpen(!menuOpen)} />
         <Collapse isOpen={menuOpen} navbar>
