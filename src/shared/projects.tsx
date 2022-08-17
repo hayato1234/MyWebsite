@@ -4,6 +4,10 @@ import bootstrapImg from "../images/RE-bootstrap.png";
 import ht_detail from "../images/HT-unit-detail.png";
 import ht_unit from "../images/HT-unit-list.png";
 import ht_login from "../images/HT-login.png";
+import MT_TL from "../images/MT_time_line_tab.png";
+import MT_DM from "../images/MT_conversation.png";
+import MT_USR from "../images/MT_nav.png";
+import MT_main from "../images/MT_main.png";
 
 export interface ProjectType {
   title: string;
@@ -66,7 +70,8 @@ export const REs = {
 
 export const HT = {
   title: "HayaTan (Vocabulary Learning iOS App)",
-  about: "Flash card app",
+  about:
+    "A flash card app for Japanese students learning business English vocabulary. Users can register/login using a Google account and study vocabulary in 5 units (5 being the most advanced). The words are saved in the Google firebase store and records user's missed words.",
   carousel: [
     {
       src: ht_detail,
@@ -92,6 +97,61 @@ export const HT = {
       github: "https://github.com/hayato1234/HT",
       linkTitle: "HayaTan App",
       tags: "SwiftUI, Xcode, iOS app, firebase",
+      key: 1,
+    },
+  ],
+};
+
+export const NUCAMPSITE = {
+  title: "NUCAMPSITE",
+  about:
+    "This was a shool project. This project helped me better understand things I learned during the lectures like React and especially Redux.",
+  carousel: [],
+  info: [
+    {
+      github: "https://github.com/hayato1234/React-Redux-Reactstrap",
+      linkTitle: "NuCampsite",
+      tags: "React, Reactstrap, Redux",
+      key: 1,
+    },
+  ],
+};
+
+export const MORITWITTER = {
+  title: "MORITWITTER",
+  about:
+    "A custom Twitter client app for Twitter. Users can enjoy message-like interface for tweets and know the tweets which are not yet read by the user. Multiple accounts login supported",
+  carousel: [
+    {
+      src: MT_main,
+      altText: "Follower list screen",
+      caption: "Follower list screen",
+      key: 1,
+    },
+    {
+      src: MT_TL,
+      altText: "Timeline",
+      caption: "Timeline",
+      key: 2,
+    },
+    {
+      src: MT_DM,
+      altText: "Direct messages",
+      caption: "Direct messages",
+      key: 3,
+    },
+    {
+      src: MT_USR,
+      altText: "Account list",
+      caption: "Account list",
+      key: 3,
+    },
+  ],
+  info: [
+    {
+      github: "https://github.com/hayato1234/MoriTwitter",
+      linkTitle: "MoriTwitter",
+      tags: "Java, Android, Twitter API, butterknife",
       key: 1,
     },
   ],
