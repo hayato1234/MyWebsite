@@ -17,7 +17,7 @@ const Header = () => {
   return (
     <React.Fragment>
       <Navbar dark sticky="top" expand="md">
-        <NavbarBrand className="ms-5" href="/">
+        <NavbarBrand className="ms-3" href="/">
           <img src={logo} alt="my logo" className="float-start" />
           <h1 className="pt-2 Page-header">Steve Moritani</h1>
         </NavbarBrand>

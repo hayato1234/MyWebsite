@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row } from "reactstrap";
+import { Col, Container, Row } from "reactstrap";
 import { skillCategories } from "../shared/skills";
 
 import { Element } from "react-scroll";
@@ -9,7 +9,9 @@ const Skills = () => {
     return (
       <React.Fragment key={skill.key}>
         <h5>{skill.category}</h5>
-        <div style={{ marginBottom: "20px" }}>
+        <Col
+          style={{ marginBottom: "20px", display: "flex", flexWrap: "wrap" }}
+        >
           {skill.list.map((skill, i) => {
             return (
               <span
@@ -25,7 +27,7 @@ const Skills = () => {
               </span>
             );
           })}
-        </div>
+        </Col>
       </React.Fragment>
     );
   });
@@ -36,6 +38,7 @@ const Skills = () => {
         <hr />
         <h2 className="Page-header mb-3">Skills</h2>
       </Row>
+      <Row></Row>
       {skillList}
     </Container>
   );
