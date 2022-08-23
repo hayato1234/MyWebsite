@@ -27,7 +27,7 @@ export interface ProjectType {
 export const REs = {
   title: "Rebuild Electronics",
   about:
-    "A project which was built for simulated E-commerce service. 2 versions of websites were built using Bootstrap and React. The state management was done by Redux. A mobile app version was made using React Native. The server side was built using Express and MongoDB.",
+    "A project which was built for simulated E-commerce service. 2 versions of websites were built using Bootstrap and React. The state management was done by Redux. A mobile app version was made using React Native with TypeScript. The server side was built using Express and MongoDB.",
   carousel: [
     {
       src: reactImg,
@@ -58,13 +58,13 @@ export const REs = {
     {
       github: "https://github.com/hayato1234/E-commerce-React",
       linkTitle: "Webpage with React",
-      tags: "React, Redux, Reactstrap, Thunk",
+      tags: "React, Reactstrap, Redux, Redux-Thunk, API",
       key: 2,
     },
     {
       github: "https://github.com/hayato1234/ReactNative-Typescript-Ecommerce",
       linkTitle: "React Native App",
-      tags: "React Native, TypeScript, Redux toolkit, Expo",
+      tags: "React Native, TypeScript, Redux toolkit, Expo, Android and iPhone simulators",
       key: 3,
     },
     {
